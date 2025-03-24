@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvyf8he1onh3m"]
+
+[ext_resource type="Theme" uid="uid://dt868a8b5nouj" path="res://addons/SceneSelectTheme.tres" id="1_wii2a"]
+[ext_resource type="Script" uid="uid://cu5f0u4cqwa1t" path="res://addons/LevelManager/GuiElements/FileSelector.cs" id="1_x4plw"]
+[ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://Assets/Editor_GUI/Themes/Button_Theme.tres" id="3_6j0yk"]
+[ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://Assets/Editor_GUI/Themes/EditorTheme.tres" id="4_2r7va"]
+
+[node name="FileSelector" type="Control"]
+layout_mode = 3
+anchor_right = 0.558
+anchor_bottom = 0.073
+offset_right = -0.120026
+offset_bottom = -0.0400047
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_x4plw")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+size = Vector2i(780, 580)
+theme = ExtResource("1_wii2a")
+ok_button_text = "Open"
+file_mode = 0
+
+[node name="SelectLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -27.0
+offset_right = 354.0
+offset_bottom = -4.0
+theme = ExtResource("4_2r7va")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Browse" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("3_6j0yk")
+text = "Browse
+"
+
+[node name="PathLabel" type="RichTextLabel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_wii2a")
+fit_content = true
+scroll_following = true

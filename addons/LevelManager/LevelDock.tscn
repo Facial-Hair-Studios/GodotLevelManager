@@ -1,0 +1,186 @@
+[gd_scene load_steps=6 format=3 uid="uid://drlxul6t6i30n"]
+
+[ext_resource type="Script" uid="uid://b83bphqctou8s" path="res://addons/LevelManager/LevelDockScript.cs" id="1_66pb0"]
+[ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://Assets/Editor_GUI/Themes/EditorTheme.tres" id="1_ejouf"]
+[ext_resource type="FontFile" uid="uid://roa48v2ap6fm" path="res://Assets/resources/Fonts/OpenSans-Light.ttf" id="4_degp0"]
+[ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://Assets/Editor_GUI/Themes/Button_Theme.tres" id="5_l86uh"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ycvli"]
+color = Color(0.947199, 0.947199, 0.947199, 1)
+
+[node name="Panel" type="Panel"]
+anchors_preset = -1
+anchor_top = -0.094
+anchor_right = 1.15
+anchor_bottom = 2.167
+offset_top = 0.120003
+offset_bottom = -0.160034
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_ejouf")
+script = ExtResource("1_66pb0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152068, 0.159625, 0.16724, 1)
+
+[node name="FileDialog" type="FileDialog" parent="."]
+title = "Open a File"
+initial_position = 2
+size = Vector2i(780, 500)
+ok_button_text = "Open"
+file_mode = 0
+root_subfolder = "Assets/resources/Levels/Scenes"
+filters = PackedStringArray("*.tscn")
+
+[node name="ManagerLabel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.003
+anchor_top = 0.03
+anchor_right = 0.454
+anchor_bottom = 0.105
+offset_left = -0.208
+offset_top = 0.449997
+offset_right = -0.144012
+offset_bottom = 0.0749969
+
+[node name="LevelManagerLabel" type="RichTextLabel" parent="ManagerLabel"]
+layout_mode = 2
+theme = ExtResource("1_ejouf")
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Level Manager: "
+fit_content = true
+autowrap_mode = 0
+
+[node name="HSeparator" type="HSeparator" parent="ManagerLabel"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 9
+theme_override_styles/separator = SubResource("StyleBoxLine_ycvli")
+
+[node name="ControlButtonsContainer" type="HBoxContainer" parent="ManagerLabel"]
+layout_mode = 2
+
+[node name="Refresh" type="Button" parent="ManagerLabel/ControlButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource("5_l86uh")
+text = "Refresh
+"
+
+[node name="Save" type="Button" parent="ManagerLabel/ControlButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource("5_l86uh")
+text = "Save"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.072
+anchor_top = 0.121
+anchor_right = 0.901
+anchor_bottom = 0.786
+offset_left = 0.00799561
+offset_top = -0.285004
+offset_right = -0.135986
+offset_bottom = 0.190002
+alignment = 1
+
+[node name="LevelsLable" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_ejouf")
+theme_override_fonts/normal_font = ExtResource("4_degp0")
+theme_override_font_sizes/normal_font_size = 20
+text = "Levels: "
+fit_content = true
+
+[node name="LevelList" type="ItemList" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_ejouf")
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 9
+theme_override_styles/separator = SubResource("StyleBoxLine_ycvli")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="NewLevel" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_l86uh")
+text = "New Level"
+
+[node name="NewLevelSelect" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_l86uh")
+text = "New Hub World"
+
+[node name="RemoveLevel" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_l86uh")
+text = "RemoveLevel
+"
+
+[node name="FilePickerContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+anchor_left = 0.062
+anchor_top = 0.819
+anchor_right = 0.904
+anchor_bottom = 0.984
+offset_left = 0.367996
+offset_top = 0.384949
+offset_right = -0.344055
+offset_bottom = 0.359985
+
+[node name="FilePickerBackground" type="ColorRect" parent="FilePickerContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0.214031, 0.220623, 0.226234, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FilePickerContainer/FilePickerBackground"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008
+anchor_right = 0.991
+anchor_bottom = 1.0
+offset_left = -0.288
+offset_right = -0.0510254
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewGameLabel" type="RichTextLabel" parent="FilePickerContainer/FilePickerBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme = ExtResource("1_ejouf")
+text = "New Game Level Selector:"
+fit_content = true
+
+[node name="NewGameLevel" type="OptionButton" parent="FilePickerContainer/FilePickerBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme = ExtResource("1_ejouf")
+
+[node name="DataFilePath" type="RichTextLabel" parent="FilePickerContainer/FilePickerBackground/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 2
+text = "Manager Data: "
+fit_content = true
