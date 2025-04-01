@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://roa48v2ap6fm"
-path="res://.godot/imported/OpenSans-Light.ttf-171e055e96b0dd9e109b780320da5857.fontdata"
+path="res://.godot/imported/OpenSans-Light.ttf-5d650034192c4fcba5c9e36df57974f3.fontdata"
 
 [deps]
 
-source_file="res://Assets/resources/Fonts/OpenSans-Light.ttf"
-dest_files=["res://.godot/imported/OpenSans-Light.ttf-171e055e96b0dd9e109b780320da5857.fontdata"]
+source_file="res://addons/LevelManager/Assets/resources/Fonts/OpenSans-Light.ttf"
+dest_files=["res://.godot/imported/OpenSans-Light.ttf-5d650034192c4fcba5c9e36df57974f3.fontdata"]
 
 [params]
 
