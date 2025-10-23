@@ -16,3 +16,7 @@ config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 [dotnet]
 
 project/assembly_name="Level-Manager"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/LevelManager/plugin.cfg")

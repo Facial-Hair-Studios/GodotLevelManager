@@ -1,6 +1,7 @@
 using Godot;
 using System;
 using Levels;
+using System.Collections.Generic;
 
 public partial class LevelManager : Node
 {
@@ -19,15 +20,22 @@ public partial class LevelManager : Node
     private string _levelManagerPath = "res://Assets/Data/LevelManagerData.tres";
     private LevelManagerData _managerData;
 
+    // Used for Additive
+    private List<LevelCommon> _levels;
+
     public int LevelCount => _managerData.Count;
     public string NewGameScene => _managerData.NewGameScene;
     public LevelCommon CurrentLevel => _currentLevel;
 
     public static new SceneTree GetTree() => s_tree;
     public bool Exists(string levelName) => _managerData.Exists(levelName);
+    public bool RemoveAdditive(Guid id) => _levels.RemoveAll(x => x.ID == id) > 0;
+    public bool RemoveAdditive(LevelCommon level) => _levels.RemoveAll(x => x == level) > 0;
+    public bool RemoveAdditive(string name) => _levels.RemoveAll(x => x.LevelName == name) > 0;
     public LevelCommon GetLevelAt(int idx) => _managerData.GetLevelAt(idx);
     public LevelCommon GetLevelByPath(string path) => _managerData.GetLevelByPath(path);
     public LevelCommon GetLevelByName(string levelName) => _managerData.GetLevelByName(levelName);
+    public void SwitchLevelPacked(PackedScene packed, LevelLoadMode mode) => Switch(packed.Instantiate<LevelCommon>(), ref _currentLevel, mode);
 
     public PackedScene LoadLevel(string levelName)
     {
@@ -76,6 +84,7 @@ public partial class LevelManager : Node
     public void Init(SceneTree T)
     {
         s_tree = new SceneTree();
+        _levels = new List<LevelCommon>();
         StartNewGame += NewGame;
         ResetLevel += Reset;
         s_tree = T;
@@ -115,7 +124,6 @@ public partial class LevelManager : Node
         }
     }
 
-    public void SwitchLevelPacked(PackedScene packed, LevelLoadMode mode) => Switch(packed.Instantiate<LevelCommon>(), ref _currentLevel, mode);
     private void Switch(LevelCommon toLoad, ref LevelCommon current, LevelLoadMode mode)
     {
         switch (mode)
@@ -137,6 +145,7 @@ public partial class LevelManager : Node
                 if (!s_tree.Root.HasNode(toLoad.GetPath()))
                 {
                     s_tree.Root.AddChild(toLoad);
+                    _levels.Add(toLoad);
                 }
                 break;
         }

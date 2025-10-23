@@ -43,7 +43,8 @@ public partial class LevelDockScript : Panel
         _newLevelButton = GetNode<Button>("BottomControl/AnchorSupportControl/LevelAdditionRemovalControl/Control3/HBoxContainer/NewLevel");
         _removeLevelButton = GetNode<Button>("BottomControl/AnchorSupportControl/LevelAdditionRemovalControl/Control3/HBoxContainer/RemoveLevel");
 
-        _dialog.InitialPosition = Window.WindowInitialPosition.CenterMainWindowScreen;
+        _dialog.InitialPosition = Window.WindowInitialPosition.CenterPrimaryScreen;
+        _dialog.RootSubfolder = "res://";
 
         _levelList.ItemClicked += ItemClicked;
         _removeLevelButton.Pressed += Remove;
@@ -154,7 +155,7 @@ public partial class LevelDockScript : Panel
 
     public void Save()
     {
-        var dir = DirAccess.Open("res://Assets");
+        var dir = DirAccess.Open("res://");
 
         if (!dir.DirExists("res://Assets/Data"))
         {

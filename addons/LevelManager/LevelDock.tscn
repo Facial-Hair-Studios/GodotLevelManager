@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://b83bphqctou8s" path="res://addons/LevelManager/LevelDockScript.cs" id="1_66pb0"]
 [ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://addons/LevelManager/Assets/Editor_GUI/Themes/EditorTheme.tres" id="1_ejouf"]
-[ext_resource type="FontFile" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Black.ttf" id="3_8pnay"]
+[ext_resource type="FontFile" uid="uid://cyx73ok43pxmd" path="res://addons/LevelManager/Assets/Resources/Fonts/Roboto-Black.ttf" id="3_8pnay"]
 [ext_resource type="Texture2D" uid="uid://caeb5gb3vukvv" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Refresh100Icon.png" id="4_8o785"]
-[ext_resource type="FontFile" path="res://Assets/resources/Fonts/OpenSans.tres" id="4_degp0"]
-[ext_resource type="FontFile" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Bold.ttf" id="4_rlvy3"]
+[ext_resource type="FontFile" uid="uid://cjwbsk3uisdcs" path="res://addons/LevelManager/Assets/Resources/Fonts/static/OpenSans/OpenSans.tres" id="4_degp0"]
+[ext_resource type="FontFile" uid="uid://etoap84rvixl" path="res://addons/LevelManager/Assets/Resources/Fonts/Roboto-Bold.ttf" id="4_rlvy3"]
 [ext_resource type="Texture2D" uid="uid://druokq71lwua7" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/SaveIcon100.png" id="5_8o785"]
 [ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://addons/LevelManager/Assets/Editor_GUI/Themes/Button_Theme.tres" id="5_l86uh"]
 [ext_resource type="Texture2D" uid="uid://dkt3w44faddyt" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Level100.png" id="9_6klgq"]
