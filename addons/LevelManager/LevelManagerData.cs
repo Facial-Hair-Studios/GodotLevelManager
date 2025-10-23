@@ -8,12 +8,12 @@ public enum LevelLoadMode { Single, Additive }
 [Tool]
 public partial class LevelManagerData : Resource
 {
-    private Dictionary<string, long> _levels { get; set; } // Contain's _levels, _levels are defined as LevelCommon
+    private Godot.Collections.Dictionary<string, long> _levels { get; set; } // Contain's _levels, _levels are defined as LevelCommon
     public string CurrentLevel { get; set; }
     [Export] public string NewGameScene { get; set; } // What scene starts when newgame on title screen
     public int Count => _levels.Count;
-    public LevelManagerData() => _levels = new Dictionary<string, long>();
-    public LevelManagerData(Dictionary<string, long> lev) => _levels = lev;
+    public LevelManagerData() => _levels = new Godot.Collections.Dictionary<string, long>();
+    public LevelManagerData(Godot.Collections.Dictionary<string, long> lev) => _levels = lev;
 
     // Returns the instantiated packed scene as a Level.
     public LevelCommon GetLevelByPath(string path) => ResourceLoader.Load<PackedScene>(path).Instantiate<LevelCommon>();
@@ -25,7 +25,7 @@ public partial class LevelManagerData : Resource
 
 #if TOOLS
 
-    [Export] public Dictionary<string, long> Levels { get => _levels; private set { _levels = value; } }
+    [Export] public Godot.Collections.Dictionary<string, long> Levels { get => _levels; private set { _levels = value; } }
 
     public bool Add(string levelName, long uid)
     {

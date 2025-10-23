@@ -10,7 +10,7 @@ namespace Levels
     * Level types must also have [Tool] Attribute to work in EditorPlugin! */
 
     [Tool]
-    public partial class LevelCommon : Node2D
+    public partial class LevelCommon : Node
     {
         public LevelDataCommon Data { get; protected set; }
 

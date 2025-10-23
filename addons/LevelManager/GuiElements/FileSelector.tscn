@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://dt868a8b5nouj" path="res://addons/SceneSelectTheme.tres" id="1_wii2a"]
 [ext_resource type="Script" uid="uid://cu5f0u4cqwa1t" path="res://addons/LevelManager/GuiElements/FileSelector.cs" id="1_x4plw"]
 [ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://Assets/Editor_GUI/Themes/Button_Theme.tres" id="3_6j0yk"]
-[ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://Assets/Editor_GUI/Themes/EditorTheme.tres" id="4_2r7va"]
+[ext_resource type="Theme" path="res://Assets/Editor_GUI/Themes/EditorTheme.tres" id="4_2r7va"]
 
 [node name="FileSelector" type="Control"]
 layout_mode = 3
