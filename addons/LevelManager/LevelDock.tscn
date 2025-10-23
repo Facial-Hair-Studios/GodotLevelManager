@@ -1,16 +1,16 @@
 [gd_scene load_steps=22 format=3 uid="uid://drlxul6t6i30n"]
 
 [ext_resource type="Script" uid="uid://b83bphqctou8s" path="res://addons/LevelManager/LevelDockScript.cs" id="1_66pb0"]
-[ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://Assets/Editor_GUI/Themes/EditorTheme.tres" id="1_ejouf"]
-[ext_resource type="FontFile" uid="uid://fysvng1sjbfd" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Black.ttf" id="3_8pnay"]
-[ext_resource type="Texture2D" uid="uid://caeb5gb3vukvv" path="res://Assets/Resources/Icons/LevelManager/Refresh100Icon.png" id="4_8o785"]
-[ext_resource type="FontFile" uid="uid://cjwbsk3uisdcs" path="res://Assets/Resources/Fonts/OpenSans.tres" id="4_degp0"]
-[ext_resource type="FontFile" uid="uid://cf3qtj4grwj75" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Bold.ttf" id="4_rlvy3"]
-[ext_resource type="Texture2D" uid="uid://druokq71lwua7" path="res://Assets/Resources/Icons/LevelManager/SaveIcon100.png" id="5_8o785"]
-[ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://Assets/Editor_GUI/Themes/Button_Theme.tres" id="5_l86uh"]
-[ext_resource type="Texture2D" uid="uid://dkt3w44faddyt" path="res://Assets/Resources/Icons/LevelManager/Level100.png" id="9_6klgq"]
-[ext_resource type="Texture2D" uid="uid://chy5p2i0sqj2e" path="res://Assets/Resources/Icons/LevelManager/Add100.png" id="9_e6uw6"]
-[ext_resource type="Texture2D" uid="uid://cl3nw3i6k53k8" path="res://Assets/Resources/Icons/LevelManager/Remove100.png" id="10_6klgq"]
+[ext_resource type="Theme" uid="uid://5q220lv5g1ke" path="res://addons/LevelManager/Assets/Editor_GUI/Themes/EditorTheme.tres" id="1_ejouf"]
+[ext_resource type="FontFile" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Black.ttf" id="3_8pnay"]
+[ext_resource type="Texture2D" uid="uid://caeb5gb3vukvv" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Refresh100Icon.png" id="4_8o785"]
+[ext_resource type="FontFile" path="res://Assets/resources/Fonts/OpenSans.tres" id="4_degp0"]
+[ext_resource type="FontFile" path="res://Assets/Resources/Fonts/robotoFont/Roboto-Bold.ttf" id="4_rlvy3"]
+[ext_resource type="Texture2D" uid="uid://druokq71lwua7" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/SaveIcon100.png" id="5_8o785"]
+[ext_resource type="Theme" uid="uid://dltcx5jine88c" path="res://addons/LevelManager/Assets/Editor_GUI/Themes/Button_Theme.tres" id="5_l86uh"]
+[ext_resource type="Texture2D" uid="uid://dkt3w44faddyt" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Level100.png" id="9_6klgq"]
+[ext_resource type="Texture2D" uid="uid://chy5p2i0sqj2e" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Add100.png" id="9_e6uw6"]
+[ext_resource type="Texture2D" uid="uid://cl3nw3i6k53k8" path="res://addons/LevelManager/Assets/Resources/Icons/LevelManager/Remove100.png" id="10_6klgq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6uw6"]
 bg_color = Color(0.105882, 0.105882, 0.117647, 1)
@@ -152,7 +152,7 @@ theme = ExtResource("5_l86uh")
 theme_override_colors/font_color = Color(0.972549, 0.972549, 1, 1)
 theme_override_font_sizes/font_size = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_8pnay")
-text = "         Refresh
+text = "             Refresh
 "
 alignment = 0
 text_overrun_behavior = 1
@@ -177,7 +177,7 @@ size_flags_horizontal = 3
 theme = ExtResource("5_l86uh")
 theme_override_colors/font_color = Color(0.972549, 0.972549, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_rlvy3")
-text = "          Save"
+text = "             Save"
 alignment = 0
 text_overrun_behavior = 1
 
@@ -196,7 +196,6 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="LabelControl" type="Control" parent="ManagerLabelControl"]
-layout_mode = 2
 anchors_preset = 0
 anchor_top = 0.478
 anchor_right = 1.0
@@ -362,7 +361,7 @@ size_flags_horizontal = 3
 theme = ExtResource("5_l86uh")
 theme_override_colors/font_color = Color(0.972549, 0.972549, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_wqers")
-text = "         New Level"
+text = "             New Level"
 alignment = 0
 text_overrun_behavior = 1
 
@@ -389,7 +388,7 @@ size_flags_horizontal = 3
 theme = ExtResource("5_l86uh")
 theme_override_colors/font_color = Color(0.972549, 0.972549, 1, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_8o785")
-text = "         Remove Level
+text = "             Remove Level
 "
 alignment = 0
 text_overrun_behavior = 1
