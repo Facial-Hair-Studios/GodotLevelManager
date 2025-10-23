@@ -2,28 +2,28 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bq28bk8a64j1v"
-path="res://.godot/imported/Roboto-Light.ttf-4e3682a9a9816abb96e2e2562654a748.fontdata"
+uid="uid://j3xtbq17w3ti"
+path="res://.godot/imported/OpenSans-Bold.ttf-b54179aa234652dbbf91ab78d4359c4b.fontdata"
 
 [deps]
 
-source_file="res://Assets/Resources/Fonts/robotoFont/Roboto-Light.ttf"
-dest_files=["res://.godot/imported/Roboto-Light.ttf-4e3682a9a9816abb96e2e2562654a748.fontdata"]
+source_file="res://Assets/resources/Fonts/static/OpenSans/OpenSans-Bold.ttf"
+dest_files=["res://.godot/imported/OpenSans-Bold.ttf-b54179aa234652dbbf91ab78d4359c4b.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
-generate_mipmaps=false
+antialiasing=0
+generate_mipmaps=true
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
-hinting=1
-subpixel_positioning=4
+hinting=2
+subpixel_positioning=1
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
